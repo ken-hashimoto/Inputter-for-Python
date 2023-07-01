@@ -1,0 +1,45 @@
+{
+	"name": "python-input",
+	"displayName": "Debug Session Inputter for Python",
+	"description": "デバッグセッション中のテキスト入力をサポートする",
+	"version": "0.0.1",
+	"publisher": "ken-hashimoto",
+	"private": true,
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"views": {
+			"debug": [
+				{
+					"type": "webview",
+					"id": "PythonInput.InputView",
+					"name": "Python Input"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -w -p ./"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.73.0",
+		"@typescript-eslint/eslint-plugin": "^5.48.2",
+		"@typescript-eslint/parser": "^5.48.2",
+		"eslint": "^8.32.0",
+		"typescript": "^5.1.3"
+	}
+}
